@@ -222,3 +222,28 @@ NexAtlas AI extends the MiroFish architecture from a general-purpose social simu
 - Digital Transformation
 
 Built on MiroFish open-source engine by MiroFish Team / Shanda Group.
+
+---
+
+## Credits
+with open('README.md', 'a') as f:
+    f.write('''
+
+---
+
+## NexAtlas AI
+
+NexAtlas AI is an AI-powered enterprise digital twin and advisory platform built upon the MiroFish architecture. It transforms a general-purpose social simulation engine into a corporate intelligence ecosystem where autonomous AI agents collaborate to analyze business strategies, data capabilities, IT governance, and digital transformation scenarios.
+
+### Core Advisory Domains
+
+- Business Strategy & Operations
+- Data Analytics & Business Intelligence
+- IT Governance, Risk & Compliance
+- Digital Transformation & Technology Strategy
+
+### Acknowledgements
+
+NexAtlas AI is built upon the open-source MiroFish framework developed by the MiroFish Team and supported by Shanda Group. We sincerely appreciate the contributions of the MiroFish Team and the CAMEL-AI team for advancing open-source multi-agent simulation technology.
+''')
+print('Done!')
