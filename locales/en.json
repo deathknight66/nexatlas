@@ -33,18 +33,18 @@
     "visitGithub": "Visit our Github page"
   },
   "home": {
-    "tagline": "Concise & Universal Swarm Intelligence Engine",
+    "tagline": "Enterprise Digital Twin Platform",
     "version": "/ v0.1-Preview",
-    "heroTitle1": "Upload Reports,",
-    "heroTitle2": "Predict the Future",
-    "heroDesc": "From a single document, {brand} extracts reality seeds to auto-generate a parallel world with up to {agentScale}. Inject variables from a god's-eye view to find the {optimalSolution} in complex group dynamics.",
-    "heroDescBrand": "MiroFish",
-    "heroDescAgentScale": "million-scale Agents",
-    "heroDescOptimalSolution": "\"local optimum\"",
-    "slogan": "Let Agents rehearse the future, let decisions prevail",
+    "heroTitle1": "Simulate Your Business.",
+    "heroTitle2": "Predict the Outcome.",
+    "heroDesc": "Upload any business document and {brand} instantly constructs a {agentScale} digital twin of your enterprise ecosystem — simulating decisions across {optimalSolution}.",
+    "heroDescBrand": "NexAtlas",
+    "heroDescAgentScale": "high-fidelity",
+    "heroDescOptimalSolution": "strategy, data, and technology",
+    "slogan": "Predict outcomes. Support decisions. Drive transformation.",
     "systemStatus": "System Status",
     "systemReady": "Ready",
-    "systemReadyDesc": "Prediction engine on standby. Upload unstructured data to initialize a simulation sequence.",
+    "systemReadyDesc": "The digital twin engine is ready. Upload your business data to initialize the simulation.",
     "metricLowCost": "Low Cost",
     "metricLowCostDesc": "Avg. $5/sim",
     "metricHighAvail": "Scalable",
@@ -75,7 +75,13 @@
     "layoutGraph": "Graph",
     "layoutSplit": "Split",
     "layoutWorkbench": "Workbench",
-    "stepNames": ["Graph Build", "Env Setup", "Run Simulation", "Report Generation", "Deep Interaction"]
+    "stepNames": [
+      "Graph Build",
+      "Env Setup",
+      "Run Simulation",
+      "Report Generation",
+      "Deep Interaction"
+    ]
   },
   "step1": {
     "ontologyGeneration": "Ontology Generation",
