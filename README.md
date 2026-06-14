@@ -201,3 +201,10 @@ MiroFish's simulation engine is powered by **[OASIS (Open Agent Social Interacti
    <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=666ghj/MiroFish&type=date&legend=top-left" />
  </picture>
 </a>
+
+---
+
+## Credits
+
+NexAtlas AI extends the MiroFish architecture into an enterprise advisory ecosystem.
+Built on MiroFish multi-agent simulation engine by MiroFish Team / Shanda Group.
