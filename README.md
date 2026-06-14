@@ -208,3 +208,17 @@ MiroFish's simulation engine is powered by **[OASIS (Open Agent Social Interacti
 
 NexAtlas AI extends the MiroFish architecture into an enterprise advisory ecosystem.
 Built on MiroFish multi-agent simulation engine by MiroFish Team / Shanda Group.
+
+
+---
+
+## Credits
+
+NexAtlas AI extends the MiroFish architecture from a general-purpose social simulation environment into an enterprise advisory ecosystem. By customizing agent personas, knowledge domains, workflows, and reporting mechanisms, NexAtlas AI enables AI-driven consulting across:
+
+- Business Strategy
+- Data Analytics
+- IT Governance
+- Digital Transformation
+
+Built on MiroFish open-source engine by MiroFish Team / Shanda Group.
