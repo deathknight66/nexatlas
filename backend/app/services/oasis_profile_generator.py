@@ -148,7 +148,7 @@ class OasisProfileGenerator:
     
     优化特性：
     1. 调用Zep图谱检索功能获取更丰富的上下文
-    2. 生成非常详细的人设（包括基本信息、职业经历、性格特征、社交媒体行为等）
+    2. 生成非常详细的人设（包括基本信息、consulting role title经历、性格特征、社交媒体行为等）
     3. 区分个人实体和抽象群体实体
     """
     
@@ -687,7 +687,7 @@ class OasisProfileGenerator:
         attrs_str = json.dumps(entity_attributes, ensure_ascii=False) if entity_attributes else "无"
         context_str = context[:3000] if context else "无额外上下文"
         
-        return f"""为实体生成详细的社交媒体用户人设,最大程度还原已有现实情况。
+        return f"""Generate a detailed enterprise professional persona for NexAtlas digital twin simulation — predicting outcomes and supporting strategic decision-making.
 
 实体名称: {entity_name}
 实体类型: {entity_type}
@@ -699,20 +699,20 @@ class OasisProfileGenerator:
 
 请生成JSON，包含以下字段:
 
-1. bio: 社交媒体简介，200字
-2. persona: 详细人设描述（2000字的纯文本），需包含:
-   - 基本信息（年龄、职业、教育背景、所在地）
-   - 人物背景（重要经历、与事件的关联、社会关系）
-   - 性格特征（MBTI类型、核心性格、情绪表达方式）
-   - 社交媒体行为（发帖频率、内容偏好、互动风格、语言特点）
-   - 立场观点（对话题的态度、可能被激怒/感动的内容）
-   - 独特特征（口头禅、特殊经历、个人爱好）
-   - 个人记忆（人设的重要部分，要介绍这个个体与事件的关联，以及这个个体在事件中的已有动作与反应）
+1. bio: Professional LinkedIn-style bio, 200 chars
+2. persona: Detailed enterprise professional profile (2000 words), including:
+   - Background (education, firm history, years of experience)
+   - Expertise (industry focus, functional specialization)
+   - Consulting style (analytical approach, client interaction style)
+   - Perspective on Business Strategy / Data Analytics / IT Governance / Digital Transformation
+   - Communication style (formal, data-driven, executive storytelling)
+   - Key opinions and biases relevant to enterprise advisory
+   - Domain memory (how this professional relates to the simulated business scenario)
 3. age: 年龄数字（必须是整数）
 4. gender: 性别，必须是英文: "male" 或 "female"
 5. mbti: MBTI类型（如INTJ、ENFP等）
 6. country: 国家（使用中文，如"中国"）
-7. profession: 职业
+7. profession: consulting role title
 8. interested_topics: 感兴趣话题数组
 
 重要:
@@ -736,7 +736,7 @@ class OasisProfileGenerator:
         attrs_str = json.dumps(entity_attributes, ensure_ascii=False) if entity_attributes else "无"
         context_str = context[:3000] if context else "无额外上下文"
         
-        return f"""为机构/群体实体生成详细的社交媒体账号设定,最大程度还原已有现实情况。
+        return f"""Generate a detailed enterprise organization profile for NexAtlas digital twin simulation — modeling business, data, and technology ecosystems.
 
 实体名称: {entity_name}
 实体类型: {entity_type}
@@ -748,20 +748,20 @@ class OasisProfileGenerator:
 
 请生成JSON，包含以下字段:
 
-1. bio: 官方账号简介，200字，专业得体
-2. persona: 详细账号设定描述（2000字的纯文本），需包含:
-   - 机构基本信息（正式名称、机构性质、成立背景、主要职能）
-   - 账号定位（账号类型、目标受众、核心功能）
-   - 发言风格（语言特点、常用表达、禁忌话题）
-   - 发布内容特点（内容类型、发布频率、活跃时间段）
-   - 立场态度（对核心话题的官方立场、面对争议的处理方式）
-   - 特殊说明（代表的群体画像、运营习惯）
-   - 机构记忆（机构人设的重要部分，要介绍这个机构与事件的关联，以及这个机构在事件中的已有动作与反应）
+1. bio: Official enterprise organization bio, 200 chars, professional tone
+2. persona: Detailed organization profile (2000 words), including:
+   - Organization overview (name, type, founding context, core functions)
+   - Role in digital twin (how this org influences business/data/tech ecosystem)
+   - Communication style (formal reports, press releases, executive memos)
+   - Strategic priorities (key decisions, market positioning, transformation agenda)
+   - Stance on Business Strategy / Data Analytics / IT Governance / Digital Transformation
+   - Organizational culture and decision-making style
+   - Institutional memory (how this org relates to the simulated business scenario)
 3. age: 固定填30（机构账号的虚拟年龄）
 4. gender: 固定填"other"（机构账号使用other表示非个人）
 5. mbti: MBTI类型，用于描述账号风格，如ISTJ代表严谨保守
 6. country: 国家（使用中文，如"中国"）
-7. profession: 机构职能描述
+7. profession: enterprise function description
 8. interested_topics: 关注领域数组
 
 重要:
@@ -814,7 +814,7 @@ class OasisProfileGenerator:
                 "age": 30,  # 机构虚拟年龄
                 "gender": "other",  # 机构使用other
                 "mbti": "ISTJ",  # 机构风格：严谨保守
-                "country": "中国",
+                "country": "Indonesia",
                 "profession": "Media",
                 "interested_topics": ["General News", "Current Events", "Public Affairs"],
             }
@@ -826,7 +826,7 @@ class OasisProfileGenerator:
                 "age": 30,  # 机构虚拟年龄
                 "gender": "other",  # 机构使用other
                 "mbti": "ISTJ",  # 机构风格：严谨保守
-                "country": "中国",
+                "country": "Indonesia",
                 "profession": entity_type,
                 "interested_topics": ["Public Policy", "Community", "Official Announcements"],
             }
@@ -944,7 +944,7 @@ class OasisProfileGenerator:
                     user_name=self._generate_username(entity.name),
                     name=entity.name,
                     bio=f"{entity_type}: {entity.name}",
-                    persona=entity.summary or f"A participant in social discussions.",
+                    persona=entity.summary or f"A stakeholder in the enterprise digital twin simulation.",
                     source_entity_uuid=entity.uuid,
                     source_entity_type=entity_type,
                 )
@@ -1000,7 +1000,7 @@ class OasisProfileGenerator:
                         user_name=self._generate_username(entity.name),
                         name=entity.name,
                         bio=f"{entity_type}: {entity.name}",
-                        persona=entity.summary or "A participant in social discussions.",
+                        persona=entity.summary or "A stakeholder in the enterprise digital twin simulation.",
                         source_entity_uuid=entity.uuid,
                         source_entity_type=entity_type,
                     )
@@ -1034,7 +1034,7 @@ class OasisProfileGenerator:
             f"",
             f"【基本属性】",
             f"年龄: {profile.age} | 性别: {profile.gender} | MBTI: {profile.mbti}",
-            f"职业: {profile.profession} | 国家: {profile.country}",
+            f"consulting role title: {profile.profession} | 国家: {profile.country}",
             f"兴趣话题: {topics_str}",
             separator
         ]
@@ -1169,7 +1169,7 @@ class OasisProfileGenerator:
                 "username": profile.user_name,
                 "name": profile.name,
                 "bio": profile.bio[:150] if profile.bio else f"{profile.name}",
-                "persona": profile.persona or f"{profile.name} is a participant in social discussions.",
+                "persona": profile.persona or f"{profile.name} is a stakeholder in the enterprise digital twin simulation.",
                 "karma": profile.karma if profile.karma else 1000,
                 "created_at": profile.created_at,
                 # OASIS必需字段 - 确保都有默认值
